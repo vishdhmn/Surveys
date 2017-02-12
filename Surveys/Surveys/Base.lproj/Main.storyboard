@@ -1,26 +1,133 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0BV-tz-RkL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="HKx-0B-e7A">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="0BV-tz-RkL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" translucent="NO" id="9R3-ms-pta">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="6Ok-ys-IrC" kind="relationship" relationship="rootViewController" id="onq-mz-vkv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gu4-HL-qcM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="377" y="-149"/>
+        </scene>
+        <!--Surveys-->
+        <scene sceneID="Tnm-LA-8J1">
+            <objects>
+                <collectionViewController id="6Ok-ys-IrC" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" id="7kU-eL-0jc">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rPI-PR-vhA">
+                            <size key="itemSize" width="375" height="605"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eTL-36-Xd1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="605"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="605"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6c2f22966125fd0a7170_l.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fDx-oU-zTU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="605"/>
+                                        </imageView>
+                                        <pageControl opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="top" hidesForSinglePage="YES" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="A3Q-hp-3eO">
+                                            <rect key="frame" x="-6" y="284" width="457" height="37"/>
+                                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.transform.rotation.z">
+                                                    <integer key="value" value="-1571"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </pageControl>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Octave" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mel-3K-tJo">
+                                            <rect key="frame" x="14" y="50" width="347" height="42"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'd love to hear from you!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dph-8j-lxC">
+                                            <rect key="frame" x="14" y="112" width="347" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpt-YE-a3x">
+                                            <rect key="frame" x="103" y="530" width="170" height="45"/>
+                                            <color key="backgroundColor" red="0.72820191062176165" green="0.025508538734316466" blue="0.032016525218193106" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="170" id="LuL-qq-hcS"/>
+                                                <constraint firstAttribute="height" constant="45" id="ZdW-ta-9vw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <state key="normal" title="Take the survey"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <real key="value" value="0.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="A3Q-hp-3eO" secondAttribute="trailing" constant="14" id="38L-RX-Kns"/>
+                                    <constraint firstAttribute="trailing" secondItem="dph-8j-lxC" secondAttribute="trailing" constant="14" id="8Fs-eH-pHY"/>
+                                    <constraint firstAttribute="bottom" secondItem="fDx-oU-zTU" secondAttribute="bottom" id="8OU-L7-kj2"/>
+                                    <constraint firstItem="Mel-3K-tJo" firstAttribute="leading" secondItem="eTL-36-Xd1" secondAttribute="leading" constant="14" id="EfQ-RJ-Zi2"/>
+                                    <constraint firstAttribute="trailing" secondItem="fDx-oU-zTU" secondAttribute="trailing" id="IFk-Gc-bHF"/>
+                                    <constraint firstItem="Mel-3K-tJo" firstAttribute="top" secondItem="eTL-36-Xd1" secondAttribute="top" constant="50" id="LO0-fM-7zY"/>
+                                    <constraint firstItem="fDx-oU-zTU" firstAttribute="leading" secondItem="eTL-36-Xd1" secondAttribute="leading" id="P1e-o4-Iql"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qpt-YE-a3x" secondAttribute="bottom" constant="30" id="Q0d-nc-uRP"/>
+                                    <constraint firstItem="Qpt-YE-a3x" firstAttribute="centerX" secondItem="eTL-36-Xd1" secondAttribute="centerX" id="RzS-ps-jEU"/>
+                                    <constraint firstItem="fDx-oU-zTU" firstAttribute="top" secondItem="eTL-36-Xd1" secondAttribute="top" id="cDh-Nv-VMI"/>
+                                    <constraint firstItem="A3Q-hp-3eO" firstAttribute="width" secondItem="fDx-oU-zTU" secondAttribute="height" id="kaY-WA-Ku6"/>
+                                    <constraint firstItem="dph-8j-lxC" firstAttribute="top" secondItem="Mel-3K-tJo" secondAttribute="bottom" constant="20" id="mpX-va-ylh"/>
+                                    <constraint firstItem="A3Q-hp-3eO" firstAttribute="centerY" secondItem="eTL-36-Xd1" secondAttribute="centerY" id="p8l-i1-xlf"/>
+                                    <constraint firstItem="dph-8j-lxC" firstAttribute="leading" secondItem="eTL-36-Xd1" secondAttribute="leading" constant="14" id="wep-8B-G9J"/>
+                                    <constraint firstAttribute="trailing" secondItem="Mel-3K-tJo" secondAttribute="trailing" constant="14" id="yfc-Ch-TN2"/>
+                                </constraints>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="6Ok-ys-IrC" id="VwV-dz-oKo"/>
+                            <outlet property="delegate" destination="6Ok-ys-IrC" id="AcZ-OR-AOo"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Surveys" id="tyE-rt-pYg">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="refresh" id="Ixf-zC-hTA">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Menu" style="plain" id="48I-bC-YiT">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcJ-mA-oXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228" y="-150.67466266866569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="6c2f22966125fd0a7170_l.jpg" width="960" height="720"/>
+    </resources>
 </document>

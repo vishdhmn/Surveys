@@ -16,6 +16,7 @@
 		C90644561E4FF8040055D822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90644541E4FF8040055D822 /* LaunchScreen.storyboard */; };
 		C90644611E4FF8040055D822 /* SurveysTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C90644601E4FF8040055D822 /* SurveysTests.m */; };
 		C906446C1E4FF8040055D822 /* SurveysUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C906446B1E4FF8040055D822 /* SurveysUITests.m */; };
+		C9E84FA71E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9E84FA61E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg */; };
 		EC75FFD468569CA11DAABA67 /* libPods-Surveys.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D200355A2B780658873A4D64 /* libPods-Surveys.a */; };
 		FA1E7A54D03AE60D9AF2D0D9 /* libPods-SurveysUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E557B844B19E605B9605F7D4 /* libPods-SurveysUITests.a */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		C90644671E4FF8040055D822 /* SurveysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C906446B1E4FF8040055D822 /* SurveysUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurveysUITests.m; sourceTree = "<group>"; };
 		C906446D1E4FF8040055D822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9E84FA61E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6c2f22966125fd0a7170_l.jpg; sourceTree = "<group>"; };
 		D0116E6104308C89EBAED111 /* Pods-SurveysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveysTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurveysTests/Pods-SurveysTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D200355A2B780658873A4D64 /* libPods-Surveys.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surveys.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2B04705815ED0495969159 /* libPods-SurveysTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SurveysTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +111,7 @@
 		C906443A1E4FF8040055D822 = {
 			isa = PBXGroup;
 			children = (
+				C9E84FA51E500D4300673A07 /* SampleImages */,
 				C90644451E4FF8040055D822 /* Surveys */,
 				C906445F1E4FF8040055D822 /* SurveysTests */,
 				C906446A1E4FF8040055D822 /* SurveysUITests */,
@@ -168,6 +171,14 @@
 				C906446D1E4FF8040055D822 /* Info.plist */,
 			);
 			path = SurveysUITests;
+			sourceTree = "<group>";
+		};
+		C9E84FA51E500D4300673A07 /* SampleImages */ = {
+			isa = PBXGroup;
+			children = (
+				C9E84FA61E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg */,
+			);
+			name = SampleImages;
 			sourceTree = "<group>";
 		};
 		EDA6B4FDEAE80AE49C5C013E /* Frameworks */ = {
@@ -298,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9E84FA71E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg in Resources */,
 				C90644561E4FF8040055D822 /* LaunchScreen.storyboard in Resources */,
 				C90644531E4FF8040055D822 /* Assets.xcassets in Resources */,
 				C90644511E4FF8040055D822 /* Main.storyboard in Resources */,
@@ -617,6 +629,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TCYL8VU8RS;
 				INFOPLIST_FILE = Surveys/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.Surveys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -630,6 +643,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TCYL8VU8RS;
 				INFOPLIST_FILE = Surveys/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.Surveys;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -709,6 +723,7 @@
 				C90644721E4FF8040055D822 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C90644731E4FF8040055D822 /* Build configuration list for PBXNativeTarget "SurveysTests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +732,7 @@
 				C90644751E4FF8040055D822 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C90644761E4FF8040055D822 /* Build configuration list for PBXNativeTarget "SurveysUITests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +741,7 @@
 				C90644781E4FF8040055D822 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
