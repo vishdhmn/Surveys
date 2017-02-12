@@ -19,6 +19,7 @@
 		C9E84FA71E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9E84FA61E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg */; };
 		C9E84FAB1E50168F00673A07 /* N3SurveysCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E84FA91E50168F00673A07 /* N3SurveysCollection.m */; };
 		C9E84FAF1E5018D700673A07 /* N3SurveyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E84FAE1E5018D700673A07 /* N3SurveyCollectionViewCell.m */; };
+		C9E84FB11E50238200673A07 /* DataModels in Resources */ = {isa = PBXBuildFile; fileRef = C9E84FB01E50238200673A07 /* DataModels */; };
 		EC75FFD468569CA11DAABA67 /* libPods-Surveys.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D200355A2B780658873A4D64 /* libPods-Surveys.a */; };
 		FA1E7A54D03AE60D9AF2D0D9 /* libPods-SurveysUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E557B844B19E605B9605F7D4 /* libPods-SurveysUITests.a */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		C9E84FA91E50168F00673A07 /* N3SurveysCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3SurveysCollection.m; sourceTree = "<group>"; };
 		C9E84FAD1E5018D700673A07 /* N3SurveyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = N3SurveyCollectionViewCell.h; sourceTree = "<group>"; };
 		C9E84FAE1E5018D700673A07 /* N3SurveyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3SurveyCollectionViewCell.m; sourceTree = "<group>"; };
+		C9E84FB01E50238200673A07 /* DataModels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DataModels; sourceTree = "<group>"; };
 		D0116E6104308C89EBAED111 /* Pods-SurveysTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SurveysTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SurveysTests/Pods-SurveysTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D200355A2B780658873A4D64 /* libPods-Surveys.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Surveys.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB2B04705815ED0495969159 /* libPods-SurveysTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SurveysTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 		C90644451E4FF8040055D822 /* Surveys */ = {
 			isa = PBXGroup;
 			children = (
+				C9E84FB01E50238200673A07 /* DataModels */,
 				C90644491E4FF8040055D822 /* AppDelegate.h */,
 				C906444A1E4FF8040055D822 /* AppDelegate.m */,
 				C906444C1E4FF8040055D822 /* ViewController.h */,
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E84FA71E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg in Resources */,
+				C9E84FB11E50238200673A07 /* DataModels in Resources */,
 				C90644561E4FF8040055D822 /* LaunchScreen.storyboard in Resources */,
 				C90644531E4FF8040055D822 /* Assets.xcassets in Resources */,
 				C90644511E4FF8040055D822 /* Main.storyboard in Resources */,
