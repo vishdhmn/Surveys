@@ -7,7 +7,7 @@
 //
 
 #import "N3SurveysCollection.h"
-
+#import "N3RestController.h"
 @interface N3SurveysCollection ()
 
 @property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
@@ -31,6 +31,9 @@ static NSString * const reuseIdentifier = @"SurveyCell";
     self.pageControl.currentPage = 0;
     self.pageControl.autoresizingMask = UIViewAutoresizingNone;
     [self.view addSubview:self.pageControl];
+    [N3RestController fetchNewOauthToken];
+    [N3RestController fetchSurveysForPage:1];
+    
 }
 
 - (void)didReceiveMemoryWarning {
