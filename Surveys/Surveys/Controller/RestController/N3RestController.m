@@ -69,7 +69,7 @@ static int resultsPerPage = 10;
                                                    [AFOAuthCredential storeCredential:credential
                                                                        withIdentifier:kOAuthIdentifier];
                                                    completionBlock(YES, credential);
-                                                   NSLog(@"Token: %@", credential.accessToken);
+                                                   //NSLog(@"Token: %@", credential.accessToken);
                                                }
                                                failure:^(NSError *error) {
                                                    NSLog(@"Error: %@", error);

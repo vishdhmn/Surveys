@@ -116,6 +116,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="pageControl" destination="A3Q-hp-3eO" id="sP9-ka-sjW"/>
+                        <segue destination="weF-lw-mYr" kind="show" identifier="showSurvey" id="K9Z-e5-cwU"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hcJ-mA-oXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -131,6 +132,24 @@
                 </pageControl>
             </objects>
             <point key="canvasLocation" x="1228" y="-150.67466266866569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YJO-Fs-VoG">
+            <objects>
+                <viewController id="weF-lw-mYr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R1p-Bg-xBB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Um2-Oa-AiZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G8k-Rb-bZ3">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EV1-pU-mAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2215" y="-108"/>
         </scene>
     </scenes>
 </document>

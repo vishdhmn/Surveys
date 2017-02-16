@@ -9,7 +9,7 @@
 #import "N3SurveysCollection.h"
 #import "N3SurveyCollectionViewCell.h"
 
-@interface N3SurveysCollection ()
+@interface N3SurveysCollection ()<N3SurveyCollectionViewCellDelegate>
 
 @property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
 @property (nonatomic, strong) NSArray *surveys;
@@ -86,7 +86,7 @@ static NSString * const reuseIdentifier = @"SurveyCell";
     N3SurveyCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     [cell configureForSurvey:[self.surveys objectAtIndex:indexPath.row]];
-    
+    cell.delegate = self;
     return cell;
 }
 
@@ -130,6 +130,11 @@ static NSString * const reuseIdentifier = @"SurveyCell";
 	
 }
 */
+#pragma mark <N3SurveyCollectionViewCellDelegate>
+
+-(void)surveyClicked:(N3Surveys *)survey{
+    [self performSegueWithIdentifier:@"showSurvey" sender:self];
+}
 
 #pragma mark <UIScrollViewDelegate> - for page control
 
