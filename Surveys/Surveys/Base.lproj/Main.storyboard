@@ -47,7 +47,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="408"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6c2f22966125fd0a7170_l.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fDx-oU-zTU">
+                                        <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fDx-oU-zTU">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="408"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Octave" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mel-3K-tJo">
@@ -71,11 +71,9 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <state key="normal" title="Take the survey"/>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <real key="value" value="0.5"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="surveyClicked:" destination="eTL-36-Xd1" eventType="touchUpInside" id="qbo-Dc-hW4"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </view>
@@ -93,6 +91,11 @@
                                     <constraint firstItem="dph-8j-lxC" firstAttribute="leading" secondItem="eTL-36-Xd1" secondAttribute="leading" constant="14" id="wep-8B-G9J"/>
                                     <constraint firstAttribute="trailing" secondItem="Mel-3K-tJo" secondAttribute="trailing" constant="14" id="yfc-Ch-TN2"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="details" destination="dph-8j-lxC" id="e0H-nt-6nK"/>
+                                    <outlet property="header" destination="Mel-3K-tJo" id="Pe7-Cx-9eD"/>
+                                    <outlet property="image" destination="fDx-oU-zTU" id="J4b-K4-rnh"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -101,10 +104,13 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Surveys" id="tyE-rt-pYg">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="refresh" id="Ixf-zC-hTA">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="Ixf-zC-hTA">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="refreshCollections:" destination="6Ok-ys-IrC" id="fDl-92-JSN"/>
+                            </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Menu" style="plain" id="48I-bC-YiT">
+                        <barButtonItem key="rightBarButtonItem" title="Menu" id="48I-bC-YiT">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
@@ -127,7 +133,4 @@
             <point key="canvasLocation" x="1228" y="-150.67466266866569"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="6c2f22966125fd0a7170_l.jpg" width="960" height="720"/>
-    </resources>
 </document>

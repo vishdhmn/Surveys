@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "N3FeedController.h"
 
 @interface N3SurveysCollection : UICollectionViewController
 

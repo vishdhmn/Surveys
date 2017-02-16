@@ -24,6 +24,9 @@
 		C995CA901E51A2A400186011 /* N3Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA861E51A2A400186011 /* N3Questions.m */; };
 		C995CA911E51A2A400186011 /* N3Surveys.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA881E51A2A400186011 /* N3Surveys.m */; };
 		C995CA921E51A2A400186011 /* N3Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA8A1E51A2A400186011 /* N3Theme.m */; };
+		C9B88A7C1E55297C0043D1BA /* N3FeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B88A7B1E55297C0043D1BA /* N3FeedController.m */; };
+		C9E014961E553ABB00C9E82F /* AuthData.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E014951E553ABB00C9E82F /* AuthData.m */; };
+		C9E014981E55475200C9E82F /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E014971E55475200C9E82F /* placeholder.png */; };
 		C9E84FA71E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9E84FA61E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg */; };
 		C9E84FAB1E50168F00673A07 /* N3SurveysCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E84FA91E50168F00673A07 /* N3SurveysCollection.m */; };
 		C9E84FAF1E5018D700673A07 /* N3SurveyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E84FAE1E5018D700673A07 /* N3SurveyCollectionViewCell.m */; };
@@ -86,6 +89,11 @@
 		C995CA881E51A2A400186011 /* N3Surveys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3Surveys.m; sourceTree = "<group>"; };
 		C995CA891E51A2A400186011 /* N3Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = N3Theme.h; sourceTree = "<group>"; };
 		C995CA8A1E51A2A400186011 /* N3Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3Theme.m; sourceTree = "<group>"; };
+		C9B88A7A1E55297C0043D1BA /* N3FeedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = N3FeedController.h; sourceTree = "<group>"; };
+		C9B88A7B1E55297C0043D1BA /* N3FeedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3FeedController.m; sourceTree = "<group>"; };
+		C9E014941E553ABB00C9E82F /* AuthData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthData.h; sourceTree = "<group>"; };
+		C9E014951E553ABB00C9E82F /* AuthData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthData.m; sourceTree = "<group>"; };
+		C9E014971E55475200C9E82F /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		C9E84FA61E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6c2f22966125fd0a7170_l.jpg; sourceTree = "<group>"; };
 		C9E84FA81E50168F00673A07 /* N3SurveysCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = N3SurveysCollection.h; sourceTree = "<group>"; };
 		C9E84FA91E50168F00673A07 /* N3SurveysCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3SurveysCollection.m; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 		C90644461E4FF8040055D822 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C9E014971E55475200C9E82F /* placeholder.png */,
 				C90644471E4FF8040055D822 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -213,6 +222,7 @@
 		C995CA771E51A2A400186011 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C9B88A791E5529510043D1BA /* FeedConroller */,
 				C995CA781E51A2A400186011 /* RestController */,
 			);
 			path = Controller;
@@ -230,6 +240,8 @@
 		C995CA7B1E51A2A400186011 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
+				C9E014941E553ABB00C9E82F /* AuthData.h */,
+				C9E014951E553ABB00C9E82F /* AuthData.m */,
 				C995CA7C1E51A2A400186011 /* DataModels.h */,
 				C995CA7D1E51A2A400186011 /* N3Alerts.h */,
 				C995CA7E1E51A2A400186011 /* N3Alerts.m */,
@@ -247,6 +259,15 @@
 				C995CA8A1E51A2A400186011 /* N3Theme.m */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		C9B88A791E5529510043D1BA /* FeedConroller */ = {
+			isa = PBXGroup;
+			children = (
+				C9B88A7A1E55297C0043D1BA /* N3FeedController.h */,
+				C9B88A7B1E55297C0043D1BA /* N3FeedController.m */,
+			);
+			path = FeedConroller;
 			sourceTree = "<group>";
 		};
 		C9E84FA51E500D4300673A07 /* SampleImages */ = {
@@ -388,6 +409,7 @@
 				C9E84FA71E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg in Resources */,
 				C90644561E4FF8040055D822 /* LaunchScreen.storyboard in Resources */,
 				C90644531E4FF8040055D822 /* Assets.xcassets in Resources */,
+				C9E014981E55475200C9E82F /* placeholder.png in Resources */,
 				C90644511E4FF8040055D822 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,8 +583,10 @@
 				C995CA8E1E51A2A400186011 /* N3Dependency.m in Sources */,
 				C9E84FAB1E50168F00673A07 /* N3SurveysCollection.m in Sources */,
 				C995CA911E51A2A400186011 /* N3Surveys.m in Sources */,
+				C9E014961E553ABB00C9E82F /* AuthData.m in Sources */,
 				C90644481E4FF8040055D822 /* main.m in Sources */,
 				C995CA8F1E51A2A400186011 /* N3DependencyConditions.m in Sources */,
+				C9B88A7C1E55297C0043D1BA /* N3FeedController.m in Sources */,
 				C995CA901E51A2A400186011 /* N3Questions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

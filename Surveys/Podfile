@@ -6,7 +6,7 @@ target 'Surveys' do
   # Pods for Surveys
   
   pod 'AFNetworking', '~> 3.0'
-  
+  pod 'AFOAuth2Manager', '~> 3.0'
   
   target 'SurveysTests' do
     inherit! :search_paths

@@ -7,16 +7,22 @@
 //
 
 #import "N3SurveysCollection.h"
-#import "N3RestController.h"
+#import "N3SurveyCollectionViewCell.h"
+
 @interface N3SurveysCollection ()
 
 @property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
+@property (nonatomic, strong) NSArray *surveys;
 
 @end
 
 @implementation N3SurveysCollection
 
 static NSString * const reuseIdentifier = @"SurveyCell";
+
+-(IBAction)refreshCollections:(id)sender{
+    [[N3FeedController sharedController] getNewFeed];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,10 +37,23 @@ static NSString * const reuseIdentifier = @"SurveyCell";
     self.pageControl.currentPage = 0;
     self.pageControl.autoresizingMask = UIViewAutoresizingNone;
     [self.view addSubview:self.pageControl];
-    [N3RestController fetchNewOauthToken];
-    [N3RestController fetchSurveysForPage:1];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFeed:) name:kN3FeedRefreshKey object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatedFeed:) name:kN3FeedUpdateKey object:nil];
+    self.surveys = [N3FeedController getFeedItems];
+}
+
+-(IBAction)newFeed:(id)object{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.surveys = [N3FeedController getFeedItems];
+        [self.collectionView reloadData];
+    });
+}
+
+-(IBAction)updatedFeed:(id)object{
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -59,13 +78,14 @@ static NSString * const reuseIdentifier = @"SurveyCell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 4;
+    self.pageControl.numberOfPages = self.surveys.count;
+    return self.surveys.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    N3SurveyCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    // Configure the cell
+    [cell configureForSurvey:[self.surveys objectAtIndex:indexPath.row]];
     
     return cell;
 }
@@ -128,6 +148,10 @@ static NSString * const reuseIdentifier = @"SurveyCell";
     }
     
     NSLog(@"New Page Number : %ld", (long)self.pageControl.currentPage);
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

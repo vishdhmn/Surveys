@@ -7,42 +7,77 @@
 //
 
 #import "N3RestController.h"
+#import "AFNetworking.h"
+#import <AFOAuth2Manager/AFOAuth2Manager.h>
+
+#define kOAuthIdentifier @"Nimbl3OAuth"
+#define kNimbl3UserName @"carlos@nimbl3.com"
+#define kNimbl3Password @"antikera"
 
 static NSString * const BaseURLString = @"https://nimbl3-survey-api.herokuapp.com";
 static int resultsPerPage = 10;
 
 @implementation N3RestController
 
-+(void)fetchSurveysForPage:(int) page{
++(void)fetchSurveysForPage:(int) page withCompletion:(void(^)(BOOL, id))completionBlock{
+    
     
     NSString *string = [NSString stringWithFormat:@"%@/surveys.json?page=%d&per_page=%d", BaseURLString, page, resultsPerPage];
-    NSURL *url = [NSURL URLWithString:string];
+    __block NSURL *url = [NSURL URLWithString:string];
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    __block AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    [manager GET:url.absoluteString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"fetchNewOauthToken JSON: %@", responseObject);
-    } failure:^(NSURLSessionTask *operation, NSError *error) {
-        NSLog(@"fetchNewOauthToken Error: %@", error);
-    }];
+    AFOAuthCredential *credential =
+    [AFOAuthCredential retrieveCredentialWithIdentifier:kOAuthIdentifier];
+    
+    __block void (^executeManager)() = ^void() {
+        [manager GET:url.absoluteString parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+            completionBlock(YES, responseObject);
+            //NSLog(@"fetchSurveysForPage JSON: %@", responseObject);
+        } failure:^(NSURLSessionTask *operation, NSError *error) {
+            completionBlock(NO, nil);
+            NSLog(@"fetchSurveysForPage Error: %@", error);
+        }];
+    };
+    
+    if (credential && !credential.isExpired) {
+        [manager.requestSerializer setAuthorizationHeaderFieldWithCredential:credential];
+        executeManager();
+    }else{
+        [N3RestController fetchNewOauthTokenWithCompletion:^(BOOL sucess, AFOAuthCredential *credential) {
+            if (sucess) {
+                executeManager();
+            }
+        }];
+    }
+    
 }
 
-+(void)fetchNewOauthToken{
++(void)fetchNewOauthTokenWithCompletion:(void(^)(BOOL, AFOAuthCredential *))completionBlock{
     
-    NSString *string = [NSString stringWithFormat:@"%@/oauth/token", BaseURLString];
-    NSURL *url = [NSURL URLWithString:string];
+    NSURL *url = [NSURL URLWithString:BaseURLString];
+    AFOAuth2Manager *OAuth2Manager =
+    [[AFOAuth2Manager alloc] initWithBaseURL:url
+                                    clientID:@"DummyNimble3Id"
+                                      secret:@"DummyNimble3Secret"];
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-    NSDictionary *params = @{@"grant_type":@"password",@"username":@"carlos@nimbl3.com",@"password":@"antikera"};
-    
-    [manager POST:url.absoluteString parameters:params progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"fetchNewOauthToken JSON: %@", responseObject);
-    } failure:^(NSURLSessionTask *operation, NSError *error) {
-        NSLog(@"fetchNewOauthToken Error: %@", error);
-    }];
-    
+    [OAuth2Manager authenticateUsingOAuthWithURLString:@"/oauth/token"
+                                              username:kNimbl3UserName
+                                              password:kNimbl3Password
+                                                 scope:nil
+                                               success:^(AFOAuthCredential *credential) {
+                                                   [AFOAuthCredential storeCredential:credential
+                                                                       withIdentifier:kOAuthIdentifier];
+                                                   completionBlock(YES, credential);
+                                                   NSLog(@"Token: %@", credential.accessToken);
+                                               }
+                                               failure:^(NSError *error) {
+                                                   NSLog(@"Error: %@", error);
+                                                   completionBlock(NO, nil);
+                                               }];
 }
+
+
 
 
 @end

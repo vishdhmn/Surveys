@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AFNetworking.h"
 
 @interface N3RestController : NSObject
 
-+(void)fetchSurveysForPage:(int) page;
-+(void)fetchNewOauthToken;
++(void)fetchSurveysForPage:(int) page withCompletion:(void(^)(BOOL, id))completionBlock;
 
 @end
