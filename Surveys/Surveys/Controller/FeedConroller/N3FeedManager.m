@@ -6,19 +6,19 @@
 //  Copyright © 2017 Vishal Dhiman. All rights reserved.
 //
 
-#import "N3FeedController.h"
-#import "N3RestController.h"
+#import "N3FeedManager.h"
+#import "N3RestManager.h"
 #import "DataModels.h"
 
-@interface N3FeedController()
+@interface N3FeedManager()
 
 @property (nonatomic, strong) NSMutableArray *currentFeed;
 
 @end
 
-@implementation N3FeedController
+@implementation N3FeedManager
 
-+ (instancetype)sharedController {
++ (instancetype)sharedManager {
     static dispatch_once_t once;
     static id sharedInstance;
     dispatch_once(&once, ^{
@@ -29,7 +29,7 @@
 
 
 +(NSArray*)getFeedItems{
-    return [[self sharedController] getAllFeed];
+    return [[self sharedManager] getAllFeed];
 }
 
 -(NSArray*)getAllFeed{
@@ -43,9 +43,9 @@
 
 -(void)getMoreFeed:(int)page{
     
-    [N3RestController fetchSurveysForPage:page withCompletion:^(BOOL success, id response) {
+    [N3RestManager fetchSurveysForPage:page withCompletion:^(BOOL success, id response) {
         if (success) {
-
+            
         }else{
             [self feedFetchFailed];
         }
@@ -58,7 +58,7 @@
 
 -(void)getNewFeed{
     
-    [N3RestController fetchSurveysForPage:1 withCompletion:^(BOOL success, id response) {
+    [N3RestManager fetchSurveysForPage:1 withCompletion:^(BOOL success, id response) {
             if (response && [response isKindOfClass:[NSArray class]]) {
                 self.currentFeed = [[NSMutableArray alloc] init];
                 for (NSDictionary *dict in (NSArray*)response) {

@@ -11,11 +11,11 @@
 #define kN3FeedRefreshKey @"FeedRefreshedKey"
 #define kN3FeedUpdateKey @"FeedUpdateKey"
 
-@interface N3FeedController : NSObject
+@interface N3FeedManager : NSObject
 
 +(NSArray*)getFeedItems;
 
-+ (instancetype)sharedController;
++ (instancetype)sharedManager;
 
 -(void)getNewFeed;
 

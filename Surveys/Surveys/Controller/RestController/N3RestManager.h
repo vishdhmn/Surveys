@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface N3RestController : NSObject
+@interface N3RestManager : NSObject
 
 +(void)fetchSurveysForPage:(int) page withCompletion:(void(^)(BOOL, id))completionBlock;
 

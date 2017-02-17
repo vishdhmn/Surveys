@@ -6,7 +6,7 @@
 //  Copyright © 2017 Vishal Dhiman. All rights reserved.
 //
 
-#import "N3RestController.h"
+#import "N3RestManager.h"
 #import "AFNetworking.h"
 #import <AFOAuth2Manager/AFOAuth2Manager.h>
 
@@ -17,7 +17,7 @@
 static NSString * const BaseURLString = @"https://nimbl3-survey-api.herokuapp.com";
 static int resultsPerPage = 10;
 
-@implementation N3RestController
+@implementation N3RestManager
 
 +(void)fetchSurveysForPage:(int) page withCompletion:(void(^)(BOOL, id))completionBlock{
     
@@ -44,7 +44,7 @@ static int resultsPerPage = 10;
         [manager.requestSerializer setAuthorizationHeaderFieldWithCredential:credential];
         executeManager();
     }else{
-        [N3RestController fetchNewOauthTokenWithCompletion:^(BOOL sucess, AFOAuthCredential *credential) {
+        [N3RestManager fetchNewOauthTokenWithCompletion:^(BOOL sucess, AFOAuthCredential *credential) {
             if (sucess) {
                 executeManager();
             }

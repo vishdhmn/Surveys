@@ -10,13 +10,12 @@
 		478966B4103F8BB9DADECDE0 /* libPods-SurveysTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB2B04705815ED0495969159 /* libPods-SurveysTests.a */; };
 		C90644481E4FF8040055D822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C90644471E4FF8040055D822 /* main.m */; };
 		C906444B1E4FF8040055D822 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C906444A1E4FF8040055D822 /* AppDelegate.m */; };
-		C906444E1E4FF8040055D822 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C906444D1E4FF8040055D822 /* ViewController.m */; };
 		C90644511E4FF8040055D822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C906444F1E4FF8040055D822 /* Main.storyboard */; };
 		C90644531E4FF8040055D822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C90644521E4FF8040055D822 /* Assets.xcassets */; };
 		C90644561E4FF8040055D822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90644541E4FF8040055D822 /* LaunchScreen.storyboard */; };
 		C90644611E4FF8040055D822 /* SurveysTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C90644601E4FF8040055D822 /* SurveysTests.m */; };
 		C906446C1E4FF8040055D822 /* SurveysUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C906446B1E4FF8040055D822 /* SurveysUITests.m */; };
-		C995CA8B1E51A2A400186011 /* N3RestController.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA7A1E51A2A400186011 /* N3RestController.m */; };
+		C995CA8B1E51A2A400186011 /* N3RestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA7A1E51A2A400186011 /* N3RestManager.m */; };
 		C995CA8C1E51A2A400186011 /* N3Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA7E1E51A2A400186011 /* N3Alerts.m */; };
 		C995CA8D1E51A2A400186011 /* N3Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA801E51A2A400186011 /* N3Answers.m */; };
 		C995CA8E1E51A2A400186011 /* N3Dependency.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA821E51A2A400186011 /* N3Dependency.m */; };
@@ -24,7 +23,7 @@
 		C995CA901E51A2A400186011 /* N3Questions.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA861E51A2A400186011 /* N3Questions.m */; };
 		C995CA911E51A2A400186011 /* N3Surveys.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA881E51A2A400186011 /* N3Surveys.m */; };
 		C995CA921E51A2A400186011 /* N3Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA8A1E51A2A400186011 /* N3Theme.m */; };
-		C9B88A7C1E55297C0043D1BA /* N3FeedController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B88A7B1E55297C0043D1BA /* N3FeedController.m */; };
+		C9B88A7C1E55297C0043D1BA /* N3FeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B88A7B1E55297C0043D1BA /* N3FeedManager.m */; };
 		C9E014961E553ABB00C9E82F /* AuthData.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E014951E553ABB00C9E82F /* AuthData.m */; };
 		C9E014981E55475200C9E82F /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E014971E55475200C9E82F /* placeholder.png */; };
 		C9E84FA71E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C9E84FA61E500D9F00673A07 /* 6c2f22966125fd0a7170_l.jpg */; };
@@ -60,8 +59,6 @@
 		C90644471E4FF8040055D822 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C90644491E4FF8040055D822 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C906444A1E4FF8040055D822 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C906444C1E4FF8040055D822 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C906444D1E4FF8040055D822 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C90644501E4FF8040055D822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C90644521E4FF8040055D822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C90644551E4FF8040055D822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,8 +69,8 @@
 		C90644671E4FF8040055D822 /* SurveysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C906446B1E4FF8040055D822 /* SurveysUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurveysUITests.m; sourceTree = "<group>"; };
 		C906446D1E4FF8040055D822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C995CA791E51A2A400186011 /* N3RestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = N3RestController.h; sourceTree = "<group>"; };
-		C995CA7A1E51A2A400186011 /* N3RestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3RestController.m; sourceTree = "<group>"; };
+		C995CA791E51A2A400186011 /* N3RestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = N3RestManager.h; sourceTree = "<group>"; };
+		C995CA7A1E51A2A400186011 /* N3RestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3RestManager.m; sourceTree = "<group>"; };
 		C995CA7C1E51A2A400186011 /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
 		C995CA7D1E51A2A400186011 /* N3Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = N3Alerts.h; sourceTree = "<group>"; };
 		C995CA7E1E51A2A400186011 /* N3Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3Alerts.m; sourceTree = "<group>"; };
@@ -89,8 +86,8 @@
 		C995CA881E51A2A400186011 /* N3Surveys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3Surveys.m; sourceTree = "<group>"; };
 		C995CA891E51A2A400186011 /* N3Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = N3Theme.h; sourceTree = "<group>"; };
 		C995CA8A1E51A2A400186011 /* N3Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3Theme.m; sourceTree = "<group>"; };
-		C9B88A7A1E55297C0043D1BA /* N3FeedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = N3FeedController.h; sourceTree = "<group>"; };
-		C9B88A7B1E55297C0043D1BA /* N3FeedController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3FeedController.m; sourceTree = "<group>"; };
+		C9B88A7A1E55297C0043D1BA /* N3FeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = N3FeedManager.h; sourceTree = "<group>"; };
+		C9B88A7B1E55297C0043D1BA /* N3FeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3FeedManager.m; sourceTree = "<group>"; };
 		C9E014941E553ABB00C9E82F /* AuthData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthData.h; sourceTree = "<group>"; };
 		C9E014951E553ABB00C9E82F /* AuthData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthData.m; sourceTree = "<group>"; };
 		C9E014971E55475200C9E82F /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
@@ -173,12 +170,10 @@
 		C90644451E4FF8040055D822 /* Surveys */ = {
 			isa = PBXGroup;
 			children = (
-				C995CA771E51A2A400186011 /* Controller */,
+				C995CA771E51A2A400186011 /* Manager */,
 				C995CA7B1E51A2A400186011 /* DataModels */,
 				C90644491E4FF8040055D822 /* AppDelegate.h */,
 				C906444A1E4FF8040055D822 /* AppDelegate.m */,
-				C906444C1E4FF8040055D822 /* ViewController.h */,
-				C906444D1E4FF8040055D822 /* ViewController.m */,
 				C906444F1E4FF8040055D822 /* Main.storyboard */,
 				C9E84FA81E50168F00673A07 /* N3SurveysCollection.h */,
 				C9E84FA91E50168F00673A07 /* N3SurveysCollection.m */,
@@ -219,21 +214,23 @@
 			path = SurveysUITests;
 			sourceTree = "<group>";
 		};
-		C995CA771E51A2A400186011 /* Controller */ = {
+		C995CA771E51A2A400186011 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				C9B88A791E5529510043D1BA /* FeedConroller */,
-				C995CA781E51A2A400186011 /* RestController */,
+				C9B88A791E5529510043D1BA /* FeedManager */,
+				C995CA781E51A2A400186011 /* RestManager */,
 			);
+			name = Manager;
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		C995CA781E51A2A400186011 /* RestController */ = {
+		C995CA781E51A2A400186011 /* RestManager */ = {
 			isa = PBXGroup;
 			children = (
-				C995CA791E51A2A400186011 /* N3RestController.h */,
-				C995CA7A1E51A2A400186011 /* N3RestController.m */,
+				C995CA791E51A2A400186011 /* N3RestManager.h */,
+				C995CA7A1E51A2A400186011 /* N3RestManager.m */,
 			);
+			name = RestManager;
 			path = RestController;
 			sourceTree = "<group>";
 		};
@@ -261,12 +258,13 @@
 			path = DataModels;
 			sourceTree = "<group>";
 		};
-		C9B88A791E5529510043D1BA /* FeedConroller */ = {
+		C9B88A791E5529510043D1BA /* FeedManager */ = {
 			isa = PBXGroup;
 			children = (
-				C9B88A7A1E55297C0043D1BA /* N3FeedController.h */,
-				C9B88A7B1E55297C0043D1BA /* N3FeedController.m */,
+				C9B88A7A1E55297C0043D1BA /* N3FeedManager.h */,
+				C9B88A7B1E55297C0043D1BA /* N3FeedManager.m */,
 			);
+			name = FeedManager;
 			path = FeedConroller;
 			sourceTree = "<group>";
 		};
@@ -573,10 +571,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C995CA8B1E51A2A400186011 /* N3RestController.m in Sources */,
+				C995CA8B1E51A2A400186011 /* N3RestManager.m in Sources */,
 				C995CA8C1E51A2A400186011 /* N3Alerts.m in Sources */,
 				C995CA8D1E51A2A400186011 /* N3Answers.m in Sources */,
-				C906444E1E4FF8040055D822 /* ViewController.m in Sources */,
 				C9E84FAF1E5018D700673A07 /* N3SurveyCollectionViewCell.m in Sources */,
 				C906444B1E4FF8040055D822 /* AppDelegate.m in Sources */,
 				C995CA921E51A2A400186011 /* N3Theme.m in Sources */,
@@ -586,7 +583,7 @@
 				C9E014961E553ABB00C9E82F /* AuthData.m in Sources */,
 				C90644481E4FF8040055D822 /* main.m in Sources */,
 				C995CA8F1E51A2A400186011 /* N3DependencyConditions.m in Sources */,
-				C9B88A7C1E55297C0043D1BA /* N3FeedController.m in Sources */,
+				C9B88A7C1E55297C0043D1BA /* N3FeedManager.m in Sources */,
 				C995CA901E51A2A400186011 /* N3Questions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,14 +21,11 @@
 static NSString * const reuseIdentifier = @"SurveyCell";
 
 -(IBAction)refreshCollections:(id)sender{
-    [[N3FeedController sharedController] getNewFeed];
+    [[N3FeedManager sharedManager] getNewFeed];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
     
     // Do any additional setup after loading the view.
     self.pageControl.frame = CGRectMake(0,0,self.collectionView.frame.size.height,37);
@@ -40,12 +37,12 @@ static NSString * const reuseIdentifier = @"SurveyCell";
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newFeed:) name:kN3FeedRefreshKey object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatedFeed:) name:kN3FeedUpdateKey object:nil];
-    self.surveys = [N3FeedController getFeedItems];
+    self.surveys = [N3FeedManager getFeedItems];
 }
 
 -(IBAction)newFeed:(id)object{
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.surveys = [N3FeedController getFeedItems];
+        self.surveys = [N3FeedManager getFeedItems];
         [self.collectionView reloadData];
     });
 }
