@@ -6,10 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
 @class N3Theme;
 
-@interface N3Surveys : NSObject <NSCoding, NSCopying>
+@interface N3Surveys : NSManagedObject <NSCoding, NSCopying>
 
 @property (nonatomic, strong) NSString *coverImageUrl;
 @property (nonatomic, strong) NSArray *languageList;

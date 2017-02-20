@@ -10,6 +10,7 @@
 
 #define kN3FeedRefreshKey @"FeedRefreshedKey"
 #define kN3FeedUpdateKey @"FeedUpdateKey"
+#define kN3FeedFailedKey @"FeedFailedKey"
 
 @interface N3FeedManager : NSObject
 

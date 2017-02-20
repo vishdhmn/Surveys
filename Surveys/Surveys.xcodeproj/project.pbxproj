@@ -15,6 +15,8 @@
 		C90644561E4FF8040055D822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90644541E4FF8040055D822 /* LaunchScreen.storyboard */; };
 		C90644611E4FF8040055D822 /* SurveysTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C90644601E4FF8040055D822 /* SurveysTests.m */; };
 		C906446C1E4FF8040055D822 /* SurveysUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C906446B1E4FF8040055D822 /* SurveysUITests.m */; };
+		C96D58991E5A89D900604AAA /* N3SurveyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96D58981E5A89D900604AAA /* N3SurveyDetailViewController.m */; };
+		C96D58E11E5A8D5100604AAA /* Surveys.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C96D58DF1E5A8D5100604AAA /* Surveys.xcdatamodeld */; };
 		C995CA8B1E51A2A400186011 /* N3RestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA7A1E51A2A400186011 /* N3RestManager.m */; };
 		C995CA8C1E51A2A400186011 /* N3Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA7E1E51A2A400186011 /* N3Alerts.m */; };
 		C995CA8D1E51A2A400186011 /* N3Answers.m in Sources */ = {isa = PBXBuildFile; fileRef = C995CA801E51A2A400186011 /* N3Answers.m */; };
@@ -69,6 +71,9 @@
 		C90644671E4FF8040055D822 /* SurveysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SurveysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C906446B1E4FF8040055D822 /* SurveysUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SurveysUITests.m; sourceTree = "<group>"; };
 		C906446D1E4FF8040055D822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96D58971E5A89D900604AAA /* N3SurveyDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = N3SurveyDetailViewController.h; sourceTree = "<group>"; };
+		C96D58981E5A89D900604AAA /* N3SurveyDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3SurveyDetailViewController.m; sourceTree = "<group>"; };
+		C96D58E01E5A8D5100604AAA /* Surveys.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Surveys.xcdatamodel; sourceTree = "<group>"; };
 		C995CA791E51A2A400186011 /* N3RestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = N3RestManager.h; sourceTree = "<group>"; };
 		C995CA7A1E51A2A400186011 /* N3RestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = N3RestManager.m; sourceTree = "<group>"; };
 		C995CA7C1E51A2A400186011 /* DataModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModels.h; sourceTree = "<group>"; };
@@ -179,9 +184,12 @@
 				C9E84FA91E50168F00673A07 /* N3SurveysCollection.m */,
 				C9E84FAD1E5018D700673A07 /* N3SurveyCollectionViewCell.h */,
 				C9E84FAE1E5018D700673A07 /* N3SurveyCollectionViewCell.m */,
+				C96D58971E5A89D900604AAA /* N3SurveyDetailViewController.h */,
+				C96D58981E5A89D900604AAA /* N3SurveyDetailViewController.m */,
 				C90644521E4FF8040055D822 /* Assets.xcassets */,
 				C90644541E4FF8040055D822 /* LaunchScreen.storyboard */,
 				C90644571E4FF8040055D822 /* Info.plist */,
+				C96D58DF1E5A8D5100604AAA /* Surveys.xcdatamodeld */,
 				C90644461E4FF8040055D822 /* Supporting Files */,
 			);
 			path = Surveys;
@@ -572,6 +580,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C995CA8B1E51A2A400186011 /* N3RestManager.m in Sources */,
+				C96D58991E5A89D900604AAA /* N3SurveyDetailViewController.m in Sources */,
 				C995CA8C1E51A2A400186011 /* N3Alerts.m in Sources */,
 				C995CA8D1E51A2A400186011 /* N3Answers.m in Sources */,
 				C9E84FAF1E5018D700673A07 /* N3SurveyCollectionViewCell.m in Sources */,
@@ -583,6 +592,7 @@
 				C9E014961E553ABB00C9E82F /* AuthData.m in Sources */,
 				C90644481E4FF8040055D822 /* main.m in Sources */,
 				C995CA8F1E51A2A400186011 /* N3DependencyConditions.m in Sources */,
+				C96D58E11E5A8D5100604AAA /* Surveys.xcdatamodeld in Sources */,
 				C9B88A7C1E55297C0043D1BA /* N3FeedManager.m in Sources */,
 				C995CA901E51A2A400186011 /* N3Questions.m in Sources */,
 			);
@@ -851,6 +861,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C96D58DF1E5A8D5100604AAA /* Surveys.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C96D58E01E5A8D5100604AAA /* Surveys.xcdatamodel */,
+			);
+			currentVersion = C96D58E01E5A8D5100604AAA /* Surveys.xcdatamodel */;
+			path = Surveys.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C906443B1E4FF8040055D822 /* Project object */;
 }
